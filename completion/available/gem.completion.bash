@@ -38,4 +38,18 @@ _gem() {
   COMPREPLY=( $(compgen -W "${commands[*]}" -- $cur) )
 }
 
+_cd_gem()
+{
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+
+    opts=`ls $GEM_HOME/gems`
+
+    COMPREPLY=($(compgen -W "${opts}" -- ${cur}))
+    return 0
+}
+
 complete -F _gem gem
+complete -F _cd_gem cdgem

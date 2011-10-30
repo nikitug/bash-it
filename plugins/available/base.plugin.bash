@@ -135,3 +135,8 @@ buf () {
     filetime=$(date +%Y%m%d_%H%M%S)
     cp ${filename} ${filename}_${filetime}
 }
+
+# projects
+function p() {
+  cd ~/projects/$1;
+}

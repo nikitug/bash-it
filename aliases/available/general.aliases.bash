@@ -42,9 +42,6 @@ alias ...='cd ../..'     # Go up two directories
 alias ....='cd ../../..' # Go up two directories
 alias -- -="cd -"        # Go back
 
-# Shell History
-alias h='history'
-
 # Tree
 if [ ! -x "$(which tree)" ]
 then
@@ -54,6 +51,18 @@ fi
 # Directory
 alias	md='mkdir -p'
 alias	rd=rmdir
+
+# Reload bashrc
+alias f5="source ~/.bashrc"
+
+# cd to bash_it
+alias .bash="cd $BASH"
+
+# grep
+alias g?="grep"
+
+# Shell History
+alias h="history | grep"
 
 function aliases-help() {
 echo "Generic Alias Usage"
@@ -67,16 +76,19 @@ echo "  c/k/cls = clear"
 echo "  ..      = cd .."
 echo "  ...     = cd ../.."
 echo "  -       = cd -"
-echo "  h       = history"
+echo "  h       = history | grep"
 echo "  md      = mkdir -p"
 echo "  rd      = rmdir"
 echo "  editor  = $EDITOR"
 echo "  pager   = $PAGER"
 echo "  piano   = pianobar"
 echo "  q       = exit"
+echo "  g?      = grep"
 echo "  irc     = $IRC_CLIENT"
 echo "  md      = mkdir -p"
 echo "  rd      = rmdir"
 echo "  rb      = ruby"
+echo "  f5      = source ~/.bashrc"
+echo "  .bash   = cd $BASH"
 echo
 }
