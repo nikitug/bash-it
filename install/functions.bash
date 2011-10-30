@@ -32,7 +32,8 @@ __bashit_update_git()
     fi
 
     pushd "${bashit_path}"
-    git checkout "${bashit_repo_branch}"
+    [[ -n $(git branch | grep "${bashit_repo_branch}") ]] || checkout_opt="-b"
+    git checkout "${checkout_opt}" "${bashit_repo_branch}"
     popd
   fi
 }
