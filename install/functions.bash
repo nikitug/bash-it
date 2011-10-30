@@ -142,7 +142,9 @@ __bashit_install_common()
 __bashit_install_remote()
 {
   [[ -s "${HOME}/.bash_profile" ]] && cp "${HOME}/.bash_profile" "${HOME}/.bash_profile.bak"
-  cp "${bashit_path}/template/bash_profile.remote.bash" "${HOME}/.bash_profile"
+  cp "${bashit_path}/template/nikitug/bash_profile.remote.bash" "${HOME}/.bash_profile"
+  [[ -s "${HOME}/.bashrc" ]] && cp "${HOME}/.bashrc" "${HOME}/.bashrc.bak"
+  cp "${bashit_path}/template/nikitug/bashrc.remote.bash" "${HOME}/.bashrc"
 
   [[ -s "${bashit_path}/install/${bashit_install_configuration}/remote.bash" ]] && source "${bashit_path}/install/${bashit_install_configuration}/remote.bash"
 }
@@ -150,7 +152,9 @@ __bashit_install_remote()
 __bashit_install_local()
 {
   [[ -s "${HOME}/.bash_profile" ]] && cp "${HOME}/.bash_profile" "${HOME}/.bash_profile.bak"
-  cp "${bashit_path}/template/bash_profile.local.bash" "${HOME}/.bash_profile"
+  cp "${bashit_path}/template/nikitug/bash_profile.local.bash" "${HOME}/.bash_profile"
+  [[ -s "${HOME}/.bashrc" ]] && cp "${HOME}/.bashrc" "${HOME}/.bashrc.bak"
+  cp "${bashit_path}/template/nikitug/bashrc.local.bash" "${HOME}/.bashrc"
 
   [[ -s "${bashit_path}/install/${bashit_install_configuration}/local.bash" ]] && source "${bashit_path}/install/${bashit_install_configuration}/local.bash"
 }
