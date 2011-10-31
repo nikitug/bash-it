@@ -25,9 +25,9 @@ VIRTUALENV_THEME_PROMPT_SUFFIX='|'
 
 function scm {
   if [[ -d .git ]]; then SCM=$GIT
-  elif [[ -n "$(which git)" && -n "$(git symbolic-ref HEAD 2> /dev/null)" ]]; then SCM=$GIT
+  elif [[ -n "$(which git 2> /dev/null)" && -n "$(git symbolic-ref HEAD 2> /dev/null)" ]]; then SCM=$GIT
   elif [[ -d .hg ]]; then SCM=$HG
-  elif [[ -n "$(which hg)" && -n "$(hg root 2> /dev/null)" ]]; then SCM=$HG
+  elif [[ -n "$(which hg 2> /dev/null)" && -n "$(hg root 2> /dev/null)" ]]; then SCM=$HG
   elif [[ -d .svn ]]; then SCM=$SVN
   else SCM='NONE'
   fi
