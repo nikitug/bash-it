@@ -5,7 +5,7 @@ _p()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
 
-    opts=`ls ~/projects`
+    opts=`ls --color=never ~/projects`
 
     COMPREPLY=($(compgen -W "${opts}" -- ${cur}))
     return 0
