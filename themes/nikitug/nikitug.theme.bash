@@ -24,7 +24,7 @@ function prompt_command()
     user_prompt_char="→"
   fi
 
-  if [ -z "$SSH_TTY" ]
+  if [[ $BASH_ENV == "local" ]]
   then
     # no ssh connection, assuming local shell
     location_color=$blue

@@ -20,6 +20,7 @@ export BASH=$HOME/.bash_it
 
 # location /.bash_it/themes/
 export BASH_THEME='nikitug'
+export BASH_ENV='remote'
 
 # Set my editor and git editor
 export EDITOR='vim'
