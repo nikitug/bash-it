@@ -35,7 +35,7 @@ function prompt_command()
 
   prompt_underline="${black}${underline_black}                                       ${reset_color}${normal}"
 
-  PS1="${prompt_underline}\n$(date "+%Y-%m-%d") \t ${location_color}\u@\h ${reset_color}in ${background_black}\w${normal}\n${yellow}$(scm_prompt_info)${reset_color}${user_prompt_char_color}${user_prompt_char}${normal}${reset_color} "
+  PS1="$(date "+%Y-%m-%d") \t ${location_color}\u@\h ${reset_color}in ${background_black}\w${normal}\n${yellow}$(scm_prompt_info)${reset_color}${user_prompt_char_color}${user_prompt_char}${normal}${reset_color} "
 }
 
 PROMPT_COMMAND=prompt_command;
