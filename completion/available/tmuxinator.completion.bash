@@ -5,7 +5,7 @@
 have=$(command -v tmuxinator)
 
 test -n "$have" &&
-  _tmuxinator_commands_complete()
+_tmuxinator_commands_complete()
 {
   COMPREPLY=()
   if [ $COMP_CWORD = 1 ]; then
@@ -25,5 +25,5 @@ _tmuxinator_open_complete()
   return 0
 }
 
-complete -F _tmuxinator_commands_complete -o default tmuxinator mux
+complete -F _tmuxinator_open_complete -o default tmuxinator mux
 complete -F _tmuxinator_open_complete -o default muxo
