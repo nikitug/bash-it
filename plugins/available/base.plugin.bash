@@ -140,3 +140,7 @@ buf () {
 function p() {
   cd ~/projects/$1;
 }
+
+function pe() {
+  gvim $1;
+}

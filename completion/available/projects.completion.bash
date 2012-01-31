@@ -12,3 +12,4 @@ _p()
 }
 
 complete -F _p p
+complete -F _p pe
