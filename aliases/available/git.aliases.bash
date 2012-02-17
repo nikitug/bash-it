@@ -18,6 +18,7 @@ alias gss='git status -s'
 alias gf='git fetch'
 alias gu='git pull'
 alias gur='git pull --rebase'
+alias guroc='git pull --rebase origin `gb | grep ^* | cut -d' ' -f2`'
 alias gup='git fetch && git rebase'
 alias gmu='git fetch origin -v; git fetch upstream -v; git merge upstream/master'
 
